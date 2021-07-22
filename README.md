@@ -46,7 +46,7 @@ python main.py
 </div>
 
 ### 原理
-通过[main.py](MOT_UI/main.py)，通过os.system()调用[set_thresh.py](MOT_UI/set_thresh.py)完成阈值设置，[infer_mot.py](MOT_UI/infer_mot.py)完成视频推理
+通过[main.py](MOT_UI/main.py)，通过os.system()调用[set_thresh.py](MOT_UI/set_thresh.py)完成阈值设置，[infer_mot.py](MOT_UI/tools/infer_mot.py)完成视频推理
 
 ## 引用
 ```
