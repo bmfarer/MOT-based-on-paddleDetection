@@ -1,0 +1,19 @@
+CenterNet:
+  backbone: DLA
+  for_mot: true
+  head: CenterNetHead
+  neck: CenterNetDLAFPN
+  post_process: CenterNetPostProcess
+CenterNetPostProcess:
+  for_mot: true
+FairMOT:
+  detector: CenterNet
+  loss: FairMOTLoss
+  reid: FairMOTEmbeddingHead
+  tracker: JDETracker
+JDETracker:
+  conf_thres: 0.4
+  metric_type: cosine
+  tracked_thresh: 0.1
+architecture: FairMOT
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/fairmot_dla34_crowdhuman_pretrained.pdparams
