@@ -11,6 +11,12 @@
 CUDA==10.1
 cuDNN==7.6
 ```
+
+### 进入文件
+```
+cd MOT_UI
+```
+
 ### 一键安装
 ``` bash
 python install.py
@@ -38,6 +44,9 @@ python main.py
 <div align="center">
   <img src="MOT_UI/image_results/After.png" width='600'/>
 </div>
+
+### 原理
+通过[main.py](MOT_UI/main.py)，通过os.system()调用[set_thresh.py](MOT_UI/set_thresh.py)完成阈值设置，[infer_mot.py](MOT_UI/infer_mot.py)完成视频推理
 
 ## 引用
 ```
